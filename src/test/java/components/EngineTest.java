@@ -19,29 +19,12 @@ public class EngineTest {
     public void getBrand() {
         assertEquals("Toyota", engine.getBrand());
     }
+    @Test
+    public void getModel() {
+        assertEquals("modelZ", engine.getModel());
+    }
 
-
-//    public void setBrand() {
-//        assertEquals();
-//    }
-//
-//
-//    public void getModel() {
-//        assertEquals();
-//    }
-//
-//
-//    public void setModel() {
-//        assertEquals();
-//    }
-//
-//
 //    public void getHorsePower() {
-//        assertEquals();
-//    }
-//
-//
-//    public void setHorsePower() {
 //        assertEquals();
 //    }
 //
@@ -51,7 +34,5 @@ public class EngineTest {
 //    }
 //
 //
-//    public void setFuel() {
-//        assertEquals();
-//    }
+
 }

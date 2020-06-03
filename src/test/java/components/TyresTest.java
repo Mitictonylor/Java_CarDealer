@@ -24,5 +24,8 @@ public class TyresTest {
         assertEquals("cinturato", tyres.getModel());
     }
 
-
+    @Test
+    public void getSize() {
+        assertEquals(17.0, tyres.getSize(), 0.01);
+    }
 }

@@ -1,3 +1,5 @@
+package vehicles;
+
 import components.Engine;
 import components.Tyres;
 import org.junit.Before;
@@ -15,9 +17,10 @@ public class ElectricCarTest {
     @Before
     public void setUp() {
         engine = new Engine("Toyota", "modelZ", 150, "electric");
-        tyres = new Tyres("Pirelli","cinturato", 17.5);
-        electricCar = new ElectricCar("Toyota", "Aygo",12000.0,"black", engine, tyres);
+        tyres = new Tyres("Pirelli", "cinturato", 17.5);
+        electricCar = new ElectricCar("Toyota", "Aygo", 12000.0, "black", engine, tyres);
     }
+
     @Test
     public void getName() {
         assertEquals("Toyota", electricCar.getBrand());

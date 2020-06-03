@@ -1,3 +1,5 @@
+package people;
+
 import components.Engine;
 import components.Tyres;
 import org.junit.Before;
@@ -20,25 +22,27 @@ public class DealershipTest {
         dealership = new Dealership(300000.00);
         engine = new Engine("Toyota", "modelZ", 150, "diesel");
         tyres = new Tyres("Pirelli", "cinturato", 17.5);
-        vehicle = new Car("Toyota", "Aygo",12000.0,"black", engine, tyres);
-        vehicle2 = new Car("Ferrari", "f1",1200000000.0,"black", engine, tyres);
+        vehicle = new Car("Toyota", "Aygo", 12000.0, "black", engine, tyres);
+        vehicle2 = new Car("Ferrari", "f1", 1200000000.0, "black", engine, tyres);
     }
 
     @Test
     public void carListStartEmpty() {
         assertEquals(0, dealership.countVehicle());
     }
+
     @Test
     public void canBuyACar___enoughMoney() {
         dealership.buy(vehicle);
-        assertEquals(288000.00, dealership.getTill(),0.01);
+        assertEquals(288000.00, dealership.getTill(), 0.01);
         assertEquals(1, dealership.countVehicle());
 
     }
+
     @Test
     public void canBuyACar___NotEnoughMoney() {
         dealership.buy(vehicle2);
-        assertEquals(300000.00, dealership.getTill(),0.01);
+        assertEquals(300000.00, dealership.getTill(), 0.01);
         assertEquals(0, dealership.countVehicle());
     }
 }

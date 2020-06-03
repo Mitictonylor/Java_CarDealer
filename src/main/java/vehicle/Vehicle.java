@@ -1,12 +1,9 @@
 package vehicle;
 
-import components.Components;
-import components.Engine;
-import components.Tyres;
 
-import java.util.ArrayList;
+import behaviour.IDamage;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements IDamage {
 
     private String brand;
     private String model;
@@ -14,7 +11,7 @@ public abstract class Vehicle {
     private String colour;
 
 
-    public Vehicle(String brand, String model, double price, String colour) {
+    public Vehicle(String brand, String model, double price, String colour)  {
         this.brand = brand;
         this.model = model;
         this.price = price;
@@ -23,6 +20,10 @@ public abstract class Vehicle {
 
     public String getBrand() {
         return brand;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getModel() {
@@ -36,5 +37,7 @@ public abstract class Vehicle {
     public String getColour() {
         return colour;
     }
-
+    public void damage(double damageValue){
+        this.setPrice(this.getPrice() - damageValue);
+    }
 }

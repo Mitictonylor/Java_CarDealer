@@ -23,20 +23,24 @@ public class Dealership implements IBuy, ISell {
     public ArrayList<Vehicle> getVehicles() {
         return vehicles;
     }
-    public void buy(Vehicle vehicle){
-        if(till > vehicle.getPrice()) {
+
+    public void buy(Vehicle vehicle) {
+        if (till > vehicle.getPrice()) {
             till -= vehicle.getPrice();
             this.vehicles.add(vehicle);
         }
     }
-    public int countVehicle(){
+
+    public int countVehicle() {
         return this.vehicles.size();
     }
 
     public void sell(Vehicle vehicle) {
-        if(this.vehicles.contains(vehicle)){
+        if (this.vehicles.contains(vehicle)) {
             this.till += vehicle.getPrice();
             this.vehicles.remove(vehicle);
         }
     }
+
+
 }

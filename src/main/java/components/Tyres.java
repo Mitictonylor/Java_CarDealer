@@ -10,7 +10,7 @@ public class Tyres extends Components {
     }
 
     public double getSize() {
-            return this.size;
-        }
+        return this.size;
+    }
 
 }

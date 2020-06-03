@@ -28,14 +28,14 @@ public class Customer implements IBuy {
     }
 
     public void buy(Vehicle vehicle) {
-        if(money > vehicle.getPrice()) {
+        if (money > vehicle.getPrice()) {
             money -= vehicle.getPrice();
             this.vehicles.add(vehicle);
         }
 
     }
 
-    public int countVehicles(){
+    public int countVehicles() {
         return this.vehicles.size();
     }
 }

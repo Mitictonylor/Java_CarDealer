@@ -15,15 +15,8 @@ public class Engine extends Components {
         return horsePower;
     }
 
-    public void setHorsePower(int horsePower) {
-        this.horsePower = horsePower;
-    }
-
     public String getFuel() {
         return fuel;
     }
 
-    public void setFuel(String fuel) {
-        this.fuel = fuel;
-    }
 }

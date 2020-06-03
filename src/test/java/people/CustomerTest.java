@@ -1,3 +1,5 @@
+package people;
+
 import components.Engine;
 import components.Tyres;
 import org.junit.Before;
@@ -21,8 +23,8 @@ public class CustomerTest {
         customer = new Customer(30000.00);
         engine = new Engine("Toyota", "modelZ", 150, "diesel");
         tyres = new Tyres("Pirelli", "cinturato", 17.5);
-        vehicle = new Car("Toyota", "Aygo",12000.0,"black", engine, tyres);
-        vehicle2 = new Car("Ferrari", "f1",1200000000.0,"black", engine, tyres);
+        vehicle = new Car("Toyota", "Aygo", 12000.0, "black", engine, tyres);
+        vehicle2 = new Car("Ferrari", "f1", 1200000000.0, "black", engine, tyres);
 
     }
 
@@ -34,14 +36,15 @@ public class CustomerTest {
     @Test
     public void canBuyACar___enoughMoney() {
         customer.buy(vehicle);
-        assertEquals(18000.00, customer.getMoney(),0.01);
+        assertEquals(18000.00, customer.getMoney(), 0.01);
         assertEquals(1, customer.countVehicles());
 
     }
+
     @Test
     public void canBuyACar___NotEnoughMoney() {
         customer.buy(vehicle2);
-        assertEquals(30000.00, customer.getMoney(),0.01);
+        assertEquals(30000.00, customer.getMoney(), 0.01);
         assertEquals(0, customer.countVehicles());
     }
 }

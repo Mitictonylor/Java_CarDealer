@@ -28,11 +28,8 @@ public class EngineTest {
         assertEquals(150, engine.getHorsePower());
     }
 
-//
-//    public void getFuel() {
-//        assertEquals();
-//    }
-//
-//
-
+    @Test
+    public void getFuel() {
+        assertEquals("diesel", engine.getFuel());
+    }
 }

@@ -1,12 +1,13 @@
 package people;
 
 import behaviour.IBuy;
+import behaviour.IRepair;
 import behaviour.ISell;
 import vehicle.Vehicle;
 
 import java.util.ArrayList;
 
-public class Dealership implements IBuy, ISell {
+public class Dealership implements IBuy, ISell, IRepair {
 
     private double till;
     private ArrayList<Vehicle> vehicles;
@@ -20,9 +21,6 @@ public class Dealership implements IBuy, ISell {
         return till;
     }
 
-    public ArrayList<Vehicle> getVehicles() {
-        return vehicles;
-    }
 
     public void buy(Vehicle vehicle) {
         if (till > vehicle.getPrice()) {
@@ -42,5 +40,13 @@ public class Dealership implements IBuy, ISell {
         }
     }
 
+
+    public void repair(Vehicle vehicle, double costRepair) {
+        if (this.vehicles.contains(vehicle) && this.till >= costRepair){
+            this.till -= costRepair;
+            vehicle.setPrice(vehicle.getPrice() + costRepair);
+
+        }
+    }
 
 }

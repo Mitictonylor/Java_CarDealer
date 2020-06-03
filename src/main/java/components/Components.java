@@ -1,6 +1,6 @@
 package components;
 
-public class Components {
+public abstract class Components {
     private String brand;
     private String model;
 

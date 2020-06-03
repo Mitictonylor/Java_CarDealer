@@ -23,11 +23,11 @@ public class EngineTest {
     public void getModel() {
         assertEquals("modelZ", engine.getModel());
     }
+    @Test
+    public void getHorsePower() {
+        assertEquals(150, engine.getHorsePower());
+    }
 
-//    public void getHorsePower() {
-//        assertEquals();
-//    }
-//
 //
 //    public void getFuel() {
 //        assertEquals();

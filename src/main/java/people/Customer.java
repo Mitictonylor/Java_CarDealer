@@ -1,8 +1,11 @@
+package people;
+
+import behaviour.IBuy;
 import vehicle.Vehicle;
 
 import java.util.ArrayList;
 
-public class Customer {
+public class Customer implements IBuy {
 
     private double money;
     private ArrayList<Vehicle> vehicles;
@@ -24,8 +27,12 @@ public class Customer {
         return vehicles;
     }
 
-    public void addVehicles(Vehicle vehicle) {
-        this.vehicles.add(vehicle);
+    public void buy(Vehicle vehicle) {
+        if(money > vehicle.getPrice()) {
+            money -= vehicle.getPrice();
+            this.vehicles.add(vehicle);
+        }
+
     }
 
     public int countVehicles(){

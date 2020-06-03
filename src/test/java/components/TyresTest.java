@@ -18,4 +18,11 @@ public class TyresTest {
     public void getBrand() {
         assertEquals("Pirelli", tyres.getBrand());
     }
+
+    @Test
+    public void getModel() {
+        assertEquals("cinturato", tyres.getModel());
+    }
+
+
 }
